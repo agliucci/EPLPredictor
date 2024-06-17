@@ -5,31 +5,11 @@ df = pd.read_csv("epl_results.csv")
 
 find_averages = df.drop(columns=["Date", "Time", "Referee", "HTR"])
 
-
-
-
 model = joblib.load('epl_decision_tree_model.pkl')
 label_encoder_home = joblib.load('label_encoder_home.pkl')
 label_encoder_away = joblib.load('label_encoder_away.pkl')
 label_encoder_ftr = joblib.load('label_encoder_ftr.pkl')
 label_encoder_htr = joblib.load('label_encoder_htr.pkl')
-
-
-
-
-
-
-# new_data = pd.DataFrame(data_to_predict)
-# print(new_data)
-
-# # X_new = new_data[['HomeTeam_encoded', 'AwayTeam_encoded', 'FTHG', 'FTAG', 'HTHG', 'HTAG', 'HST', 'AST', 'HF', 'AF', 'HC', 'AC', 'HY', 'AY', 'HR', 'AR']]
-
-
-# # predictions = model.predict(X_new)
-
-
-# # predicted_outcome = label_encoder_ftr.inverse_transform(predictions)[0]
-# # print(f"Predicted Outcome: {predicted_outcome}")
 
 
 def home_average(home_team):
@@ -52,15 +32,8 @@ def away_encode(away_team):
     away_encoded = label_encoder_away.fit_transform([away_team])
     return away_encoded
 
-
-
-
-
 home_team_user = input("Home Team: ")
 away_team_user = input("Away Team: ")
-
-
-
 
 data_to_predict = {
     'HomeTeam': [home_team_user],
