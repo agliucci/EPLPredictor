@@ -25,6 +25,8 @@ def predict():
     if request.method == 'POST':
         home_team = request.form['home_team']
         away_team = request.form['away_team']
+        home_team = home_team.title()
+        away_team = away_team.title()
 
 
         def home_average(home_team):
@@ -79,6 +81,10 @@ def predict():
         predictions = model.predict(X_new)
 
         predicted_outcome = label_encoder_ftr.inverse_transform(predictions)[0]
+        if predicted_outcome == "H":
+            predicted_outcome = home_team + " Win"
+        else:
+            predicted_outcome = away_team + " Win"
         return render_template('index.html', prediction_text=f"Predicted Outcome: {predicted_outcome}", prediction_made=True)
 
     return render_template('index.html')
@@ -86,4 +92,4 @@ def predict():
     
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=3000)
+    serve(app, host="0.0.0.0", port=3000)
