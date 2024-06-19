@@ -6,7 +6,7 @@
 
 body {
     padding: 2rem;
-    background-color: #333;
+    background: linear-gradient(to right, #04F9FC, #7573F7);
     color: whitesmoke;
     min-height: 100vh;
     display: flex;
@@ -14,6 +14,7 @@ body {
     align-items: center;
     gap: 2rem;
     font-size: 2rem;
+
 }
 
 input, button {
@@ -21,3 +22,4 @@ input, button {
     padding: 1rem;
     border-radius: 10px;
 }
+
