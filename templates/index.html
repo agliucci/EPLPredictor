@@ -14,5 +14,15 @@
         <input type="text" name="away_team" placeholder="Away Team">
         <button type="submit">Predict</button>
     </form>
+
+    <div id="prediction">
+        {{ prediction_text }}
+    </div>
+
+    {% if prediction_made %}
+    <button class = "button">
+        <a href="/">Try again</a>
+    </button>
+    {% endif %}
 </body>
 </html>
