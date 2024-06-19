@@ -85,7 +85,7 @@ def predict():
             predicted_outcome = home_team + " Win"
         else:
             predicted_outcome = away_team + " Win"
-        if home_team not in df["HomeTeam"].values or away_team not in df["AwayTeam"].values:
+        if home_team not in df["HomeTeam"].values or away_team not in df["AwayTeam"].values or home_team == away_team or len(home_team) == 0 or len(away_team) == 0:
             return render_template('index.html', prediction_text="Please enter valid teams", prediction_made=True)
         else:
             return render_template('index.html', prediction_text=f"Predicted Outcome: {predicted_outcome}", prediction_made=True)
