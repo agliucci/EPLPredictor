@@ -14,12 +14,39 @@ body {
     align-items: center;
     gap: 2rem;
     font-size: 2rem;
-
+    font-family: 'Gotham', sans-serif;
 }
 
-input, button {
+input {
     font-size: 2rem;
     padding: 1rem;
     border-radius: 10px;
+    border-color: white;
+    font-weight: bold;
+}
+
+button {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #4eff83;
+    border-color: white;
+    font-weight: bold;
+    color: white;
+}
+
+
+#try-again {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #4eff83;
+    font-weight: bold;
+    color: white;
+}
+
+#prediction {
+    font-weight: bold;
+    color: white;
 }
 
