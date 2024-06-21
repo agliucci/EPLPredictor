@@ -25,8 +25,8 @@ def predict():
     if request.method == 'POST':
         home_team = request.form['home_team']
         away_team = request.form['away_team']
-        home_team = home_team.title()
-        away_team = away_team.title()
+        home_team = home_team.title().strip()
+        away_team = away_team.title().strip()
 
 
         def home_average(home_team):
