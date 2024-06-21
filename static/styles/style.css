@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+    }
+    
+    body {
     padding: 2rem;
     background: linear-gradient(to right, #04F9FC, #7573F7);
     color: whitesmoke;
@@ -15,17 +15,17 @@ body {
     gap: 2rem;
     font-size: 2rem;
     font-family: 'Gotham', sans-serif;
-}
-
-input {
+    }
+    
+    input {
     font-size: 2rem;
     padding: 1rem;
     border-radius: 10px;
     border-color: white;
     font-weight: bold;
-}
-
-button {
+    }
+    
+    button {
     font-size: 2rem;
     padding: 1rem;
     border-radius: 10px;
@@ -33,28 +33,31 @@ button {
     border-color: white;
     font-weight: bold;
     color: white;
-}
-
-
-#try-again {
+    }
+    
+    #try-again {
     font-size: 2rem;
     padding: 1rem;
     border-radius: 10px;
     background-color: #4eff83;
     font-weight: bold;
     color: white;
-}
-
-#prediction {
+    }
+    
+    #prediction {
     font-weight: bold;
     color: white;
-}
+    }
 
-.container {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
+    @media (max-width: 600px) {
+        body {
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+    
+        input, button {
+            font-size: 1.5rem;
+            padding: 0.75rem;
+        }
+    }
+    
