@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EPLPredictor</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
 </head>
 
 <body>
         <div class="container">
         <h1>EPL Predictor</h1>
-        <form action="/predict" method="post">
+        <form action="/predict" method="post">`
             <input type="text" name="home_team" placeholder="Home Team">
             <input type="text" name="away_team" placeholder="Away Team">
             <button type="submit">Predict</button>
