@@ -9,21 +9,24 @@
 </head>
 
 <body>
-    <h1>EPL Predictor</h1>
-    <form action="/predict" method="post">
-        <input type="text" name="home_team" placeholder="Home Team">
-        <input type="text" name="away_team" placeholder="Away Team">
-        <button type="submit">Predict</button>
-    </form>
+        <div class="container">
+        <h1>EPL Predictor</h1>
+        <form action="/predict" method="post">
+            <input type="text" name="home_team" placeholder="Home Team">
+            <input type="text" name="away_team" placeholder="Away Team">
+            <button type="submit">Predict</button>
+        </form>
 
-    <div id="prediction">
-        {{ prediction_text }}
+        <div id="prediction">
+            {{ prediction_text }}
+        </div>
+
+        {% if prediction_made %}
+        <button id="try-again">
+            <a href="/">Try again</a>
+        </button>
+        {% endif %}
+
     </div>
-
-    {% if prediction_made %}
-    <button id="try-again">
-        <a href="/">Try again</a>
-    </button>
-    {% endif %}
 </body>
 </html>
